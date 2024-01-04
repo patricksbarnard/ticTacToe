@@ -14,4 +14,8 @@ def check_winner(board, player):
          return True
     return False
 
+def is_board_full(board):
+     return all(board[i][j] != ' ' for i in range(3) for j in range(3))
+
+
 
