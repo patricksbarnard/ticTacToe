@@ -26,7 +26,7 @@ def play_game():
 
         #player move
         row = int(input("picks a row (0,1,2):"))
-        col = int(input("pick a column 90,1,2):"))
+        col = int(input("pick a column (0,1,2):"))
 
         #game course
         #empty cell?
@@ -35,13 +35,13 @@ def play_game():
 
              #winner?
              if check_winner(board, current_player):
-                  print(board)
+                  print_board(board)
                   print(f"player {current_player} wins")
                   break
              
              #tie?
              if is_board_full(board):
-                  print(board)
+                  print_board(board)
                   print("tie")
                   break
              
@@ -49,6 +49,6 @@ def play_game():
              current_player = 'O' if current_player =='X' else 'X'
         else:
              print("pick a diffrent cell")
-
+             
 if __name__ == "__main__":
     play_game()
